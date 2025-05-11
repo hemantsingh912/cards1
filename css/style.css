@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../image/y.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
+  font-family: Algerian;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 320px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 8px solid #fff;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  transition: 2.6s ease-in-out;
+}
+
+.card:hover .card-body {
+  right: 0;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card-sub-title {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card-info {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.card-btn {
+  color: #1f3d47;
+  background: #8fabba;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-info {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
